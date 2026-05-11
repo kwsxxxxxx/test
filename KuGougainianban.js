@@ -6,8 +6,8 @@
 [rewrite_local]
  ^https:\/\/gateway\.kugou\.com\/youth\/v1\/activity\/get_listen_song_task\?.* url script-request-header https://gist.githubusercontent.com/Yu9191/f679b48faf12794f794e7f95fc823fe1/raw/kugou_signin.js
 [task_local]
-# 定时签到（每天 09:10 执行一次）
-10 9 * * * https://gist.githubusercontent.com/Yu9191/f679b48faf12794f794e7f95fc823fe1/raw/kugou_signin.js, tag=酷狗音乐概念版签到, enabled=true
+# 定时签到（每天 07:10 执行一次）
+10 7 * * * https://gist.githubusercontent.com/Yu9191/f679b48faf12794f794e7f95fc823fe1/raw/kugou_signin.js, tag=酷狗音乐概念版签到, enabled=true
 [mitm]
 hostname = gateway.kugou.com
 
