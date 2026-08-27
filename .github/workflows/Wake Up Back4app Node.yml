@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Send HTTP Request to Wake Container
         run: |
-          curl -s https://14251-mivrgkun.b4a.run > /dev/null
+          curl -s https://14251-eeudwoff.b4a.run > /dev/null
           echo "Wake up request sent successfully!"
