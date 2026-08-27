@@ -1,0 +1,15 @@
+name: Wake Up Back4app Node
+
+on:
+  workspace_dispatch: # 支持手动触发
+  schedule:
+    - cron: '*/5 * * * *' # 每 5 分钟自动执行一次（注：GitHub 定时可能有几分钟延迟，但保活足够了）
+
+jobs:
+  wake-up:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send HTTP Request to Wake Container
+        run: |
+          curl -s https://14251-mivrgkun.b4a.run > /dev/null
+          echo "Wake up request sent successfully!"
